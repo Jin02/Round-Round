@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C15AD3B182229DA005B5E91 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C15AD3A182229DA005B5E91 /* CoreMotion.framework */; };
 		8690B124145013A600C191F6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8690B123145013A600C191F6 /* QuartzCore.framework */; };
 		8690B126145013A600C191F6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8690B125145013A600C191F6 /* OpenGLES.framework */; };
 		8690B128145013A600C191F6 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8690B127145013A600C191F6 /* OpenAL.framework */; };
@@ -222,6 +223,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C15AD3A182229DA005B5E91 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		8690B11F145013A600C191F6 /* RandR_iOS5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandR_iOS5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8690B123145013A600C191F6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8690B125145013A600C191F6 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -575,6 +577,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C15AD3B182229DA005B5E91 /* CoreMotion.framework in Frameworks */,
 				8690B2BD14501A3900C191F6 /* GameKit.framework in Frameworks */,
 				8690B124145013A600C191F6 /* QuartzCore.framework in Frameworks */,
 				8690B126145013A600C191F6 /* OpenGLES.framework in Frameworks */,
@@ -611,6 +614,7 @@
 		8690B122145013A600C191F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C15AD3A182229DA005B5E91 /* CoreMotion.framework */,
 				8690B123145013A600C191F6 /* QuartzCore.framework */,
 				8690B125145013A600C191F6 /* OpenGLES.framework */,
 				8690B127145013A600C191F6 /* OpenAL.framework */,
@@ -1392,6 +1396,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RandR_iOS5/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = RandR_iOS5/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1407,6 +1412,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RandR_iOS5/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = RandR_iOS5/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1434,6 +1440,7 @@
 				8690B293145013A900C191F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

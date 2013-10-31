@@ -406,8 +406,8 @@
 	Reverse.anchorPoint = Speed.anchorPoint = ccp(0.5,0);
 	_BackBt.anchorPoint = ccp(1,1);
 	
-	[Speed setPosition:ccp(30,-160)];
-	[Reverse setPosition:ccp(-60,-160)];
+	[Speed setPosition:ccp(30, 80)];
+	[Reverse setPosition:ccp(-60, 80)];
 	[_BackBt setPosition:ccp(240,160)];
 	
 	

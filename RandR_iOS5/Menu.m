@@ -66,23 +66,26 @@
 												 target:self
 											   selector:@selector(Credit:)];
 		
-		CCMenu	*menu = [CCMenu menuWithItems:_SinglePlay,_MultiPlay,_Help,_Credit,nil];
 		
 		_SinglePlay.anchorPoint	= ccp(0, 0.5f);
 		_MultiPlay.anchorPoint	= ccp(0, 0.5f);
 		_Help.anchorPoint		= ccp(1.0f,0.5f);
 		_Credit.anchorPoint		= ccp(1.0f,0.5f);
 		
-		_SinglePlay.position	= ccp(-440,-30);
-		_MultiPlay.position		= ccp(-440,-110);
-		_Credit.position		= ccp(440,-30);
-		_Help.position			= ccp(440,-110);
+		_SinglePlay.position	= ccp(-440, 130);
+		_MultiPlay.position		= ccp(-440, 50);
+		_Credit.position		= ccp(840, 130);
+		_Help.position			= ccp(840, 50);
 		
 		[self ButtonInActions];
 		_ButtonCheck = NO;
 		
+        CCMenu	*menu = [CCMenu menuWithItems:_SinglePlay, _MultiPlay, _Help, _Credit, nil];
+        menu.anchorPoint = ccp(0, 0);
+        menu.position = ccp(0, 0);
+
 		[self addChild:_loading z:tag_BackGround+1 tag:tag_BackGround];
-		[self addChild:menu z:tag_Interface tag:tag_Interface];
+		[self addChild:menu z:tag_Interface + 10 tag:tag_Interface];
 		[self addChild:_title  z:tag_BackGround+1 tag:tag_BackGround];
 		[self addChild:_BackGround z:tag_BackGround tag:tag_BackGround];
 		
@@ -105,16 +108,16 @@
 -(void)ButtonInActions
 {
 	[_SinglePlay runAction:
-	 [CCMoveTo actionWithDuration:0.5f position:ccp(-240,-30)]];
+	 [CCMoveTo actionWithDuration:0.5f position:ccp(0, 130)]];
 	 
 	[_MultiPlay runAction:
-	 [CCMoveTo actionWithDuration:0.5f position:ccp(-240,-110)]];
+	 [CCMoveTo actionWithDuration:0.5f position:ccp(0, 50)]];
 	  
 	[_Credit runAction:
-	   [CCMoveTo actionWithDuration:0.5f position:ccp(240,-30)]];
+	   [CCMoveTo actionWithDuration:0.5f position:ccp(480,130)]];
 	
 	[_Help runAction:
-	 [CCMoveTo actionWithDuration:0.5f position:ccp(240,-110)]];
+	 [CCMoveTo actionWithDuration:0.5f position:ccp(480,50)]];
 	
 	_ButtonCheck = NO;
 }
@@ -122,16 +125,16 @@
 -(void)ButtonOutActions
 {
 	[_SinglePlay runAction:
-	 [CCMoveTo actionWithDuration:0.3f position:ccp(-440,-30)]];
+	 [CCMoveTo actionWithDuration:0.3f position:ccp(-440,130)]];
 	
 	[_MultiPlay runAction:
-	 [CCMoveTo actionWithDuration:0.3f position:ccp(-440,-110)]];
+	 [CCMoveTo actionWithDuration:0.3f position:ccp(-440,50)]];
 	
 	[_Credit runAction:
-	 [CCMoveTo actionWithDuration:0.3f position:ccp(440,-30)]];
+	 [CCMoveTo actionWithDuration:0.3f position:ccp(840,130)]];
 	
 	[_Help runAction:
-	 [CCMoveTo actionWithDuration:0.3f position:ccp(440,-110)]];
+	 [CCMoveTo actionWithDuration:0.3f position:ccp(840,50)]];
 	
 	_ButtonCheck = YES;
 }
